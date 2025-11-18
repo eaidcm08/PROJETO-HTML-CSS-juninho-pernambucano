@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sociedade Esportiva Palmeiras - Página Inicial</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/10/Palmeiras_logo.svg" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: linear-gradient(to bottom, #f4f4f4, #e0f7e0);
+      line-height: 1.6; 
+      font-size: 16px; 
+      font-weight: normal; 
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: green;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+    }
+
+    p a {
+      color: green;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.5rem;
+      transition: color 0.3s ease; 
+    }
+    p a:hover { 
+      text-decoration: underline;
+      color: darkgreen;
+    }
+
+    .container {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      padding: 2rem;
+      margin-top: 2rem;
+      border: 3px solid green;
+      border-radius: 10px;
+      background-color: rgba(144, 238, 144, 0.1);
+      max-width: 90vw;
+      margin: 2rem auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    img {
+      width: 350px; 
+      height: auto; 
+    }
+
+    .players-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .player-button {
+      background: linear-gradient(45deg, green, darkgreen); 
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s ease; 
+      position: relative;
+      overflow: hidden;
+    }
+    .player-button::before {
+      content: "👾"; 
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .player-button:hover {
+      background: linear-gradient(45deg, darkgreen, green);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: translateY(-4px) scale(1.05);
+    }
+    .player-button:hover::before {
+      opacity: 1;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+      border: 2px solid green;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #e0f7e0;
+      border-bottom: 2px solid green;
+    }
+
+    details {
+      margin-top: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1rem;
+      border-radius: 8px;
+      border: 2px solid green;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: green;
+    }
+
+    hr {
+      border: 1px solid green;
+      margin: 1rem 0;
+    }
+
+    @media (max-width: 768px) { 
+      .container {
+        padding: 1rem;
+        max-width: 95vw;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      table {
+        font-size: 0.9rem;
+      }
+      img {
+        width: 150px; 
+      }
+      .players-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media print { /* Media print */
+      body {
+        background: white;
+        color: black;
+      }
+      .container {
+        box-shadow: none;
+        border: none;
+      }
+      img {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .player-button {
+        background: none;
+        color: black;
+        border: 1px solid black;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>
+      <a href="index.html">Home</a> | <!-- Link -->
+      <a href="ctt.html">Contato</a>
+    </p>
+
+    <hr>
+
+    <h1 style="text-align: center;">
+        Sociedade Esportiva Palmeiras
+        <br><br>
+        <div class="image-container">
+          <img src="logopal.png" alt="Logo do Palmeiras" />
+        </div>
+    </h1>
+
+    <h1 align="center" style="color: green;" id="historia">História do Palmeiras</h1> <!-- Âncora -->
+
+    <p>A história do <b>Palmeiras</b>, um dos clubes de futebol mais tradicionais do Brasil, começou em <i>26 de agosto de 1914</i>, quando foi fundado por imigrantes italianos em São Paulo. Inicialmente, o clube era conhecido como <b>Palestra Italia</b>, e seu objetivo era promover a prática do futebol entre a comunidade italiana. O time rapidamente se destacou nas competições locais, conquistando seu primeiro título em <b>1920</b>, ao vencer o Campeonato Paulista.</p>
+
+    <p>Durante a década de <b>1930</b>, o Palestra Italia começou a se consolidar como uma força no futebol brasileira, conquistando diversos campeonatos estaduais. Em <b>1942</b>, devido à Segunda Guerra Mundial e à pressão do governo brasileiro, o clube mudou seu nome para <b>Sociedade Esportiva Palmeiras</b>, um nome que se tornaria sinônimo de sucesso e tradição.</p>
+
+    <p>Na década de <b>1960</b>, o Palmeiras alcançou um novo patamar, conquistando a <i>Copa Rio Internacional</i> em <b>1951</b>, um dos primeiros torneios de clubes do mundo, que é considerado por muitos como o primeiro torneio mundial de clubes. O clube continuou a brilhar nas décadas seguintes, conquistando títulos importantes, incluindo o Campeonato Brasileiro e a Copa do Brasil.</p>
+
+    <p>Nos anos <b>1990</b>, o Palmeiras viveu uma fase de grande sucesso, com a conquista de vários títulos, incluindo a Copa do Brasil em <b>1998</b> e a Copa Mercosul em <b>1998</b>. O clube também se destacou na era dos investimentos, com a construção de sua nova arena, o <b>Allianz Parque</b>, inaugurada em <b>2014</b>, que se tornou um dos estádios mais modernos do Brasil.</p>
+
+    <p>O Palmeiras é conhecido por sua grande torcida e rivalidades, especialmente com o Corinthians, com quem disputa o clássico conhecido como <i>Paulistão</i>. Ao longo de sua história, o clube acumulou uma rica tradição e uma vasta coleção de títulos, consolidando-se como um dos maiores clubes de futebol do Brasil e da América do Sul. A história do Palmeiras é marcada por conquistas, desafios e uma paixão inabalável por parte de seus torcedores, que continuam a apoiar o clube em todas as suas jornadas.</p>
+
+    <p><u>O Palmeiras é um símbolo de luta e superação no futebol brasileiro.</u></p>
+
+    <h3>Principais Títulos do Palmeiras</h3>
+    <table border="1" cellspacing="0" cellpadding="5"> <!-- Tabela -->
+      <tr>
+        <th>Competição</th>
+        <th>Número de Títulos</th>
+        <th>Títulos Conquistados</th>
+      </tr>
+      <tr>
+        <td>Campeonato Brasileiro</td>
+        <td>12</td>
+        <td>1960, 1967, 1967, 1969, 1972, 1973, 1993, 1994, 2016, 2018, 2022, 2023</td>
+      </tr>
+      <tr>
+        <td>Copa Libertadores</td>
+        <td>3</td>
+        <td>1999, 2020, 2021</td>
+      </tr>
+      <tr>
+        <td>Copa do Brasil</td>
+        <td>4</td>
+        <td>1998, 2012, 2015, 2020</td>
+      </tr>
+      <tr>
+        <td>Copa Mercosul</td>
+        <td>1</td>
+        <td>1998</td>
+      </tr>
+      <tr>
+        <td>Recopa Sul-Americana</td>
+        <td>2</td>
+        <td>2020, 2022</td>
+      </tr>
+      <tr>
+        <td>Supercopa do Brasil</td>
+        <td>1</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>Copa dos Campeões</td>
+        <td>1</td>
+        <td>2000</td>
+      </tr>
+      <tr>
+        <td>Torneio Rio-São Paulo</td>
+        <td>5</td>
+        <td>1933, 1951, 1965, 1993, 2000</td>
+      </tr>
+      <tr>
+        <td>Campeonato Paulista</td>
+        <td>28</td>
+        <td>1920, 1926, 1926, 1927, 1932, 1933, 1934, 1936, 1938, 1940, 1942, 1944, 1947, 1950, 1959, 1963, 1966, 1972, 1974, 1976, 1993, 1994, 1996, 2008, 2020, 2022, 2023, 2024</td>
+      </tr>
+    </table>
+
+    <h3>Jogadores Notáveis</h3>
+    <div class="players-list">
+      <button class="player-button">Ademir da Guia</button>
+      <button class="player-button">Dudu</button>
+      <button class="player-button">Marcos</button>
+      <button class="player-button">Zinho</button>
+      <button class="player-button">Rivaldo</button>
+    </div>
+
+    <details>
+      <summary><b>Curiosidades sobre o Palmeiras</b></summary>
+      <ul>
+        <li>É o clube com mais títulos nacionais no Brasil.</li>
+        <li>É o time com mais títulos da libertadores no Brasil.</li>
+        <li>O Allianz Parque é um dos estádios mais modernos do Brasil.</li>
+        <li>Foi fundado por membros da comunidade italiana em São Paulo.</li>
+        <li>Vestiu a camisa da seleção brasileira e ganhou da temída seleçao uruguaia em 1965.</li>
+      </ul>
+    </details>
+
+    <p>Voltar a <a href="#historia">história</a>.</p>
+  </div>
+</body>
+</html>
